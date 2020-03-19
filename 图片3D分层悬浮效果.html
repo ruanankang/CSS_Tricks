@@ -1,0 +1,101 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Ankong
+ * @Date: 2019-08-24 20:44:35
+ * @LastEditors: Ankong
+ * @LastEditTime: 2019-10-29 10:47:47
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        图片3D分层悬浮效果
+    </title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url("bg01.jpg") center no-repeat;
+            background-size: cover;
+        }
+        
+        .code-box {
+            height: 50%;
+            width: 20%;
+            background-color: #fff;
+            margin-left: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .code-box .code {
+            height: 80%;
+        }
+        
+        .container {
+            position: relative;
+            width: 360px;
+            height: 640px;
+            margin-top: 20px;
+            background-color: rgba(255, 243, 95, 0.27);
+            transform: scale(1);
+            /* transform: rotate(-45deg) skew(45deg) scale(1); */
+            /*transition: 0.5s;*/
+        }
+        
+        .container img {
+            position: absolute;
+            width: 100%;
+            transition: 0.5s;
+        }
+        
+        .container:hover img:nth-child(5) {
+            transform: translate(-200px, 0);
+            opacity: 1;
+        }
+        
+        .container:hover img:nth-child(4) {
+            transform: translate(-160px, 0);
+            opacity: 0.8;
+        }
+        
+        .container:hover img:nth-child(3) {
+            transform: translate(-120px, 0);
+            opacity: 0.6;
+        }
+        
+        .container:hover img:nth-child(2) {
+            transform: translate(-80px, 0);
+            opacity: 0.4;
+        }
+        
+        .container:hover img:nth-child(1) {
+            transform: translate(-40px, 0);
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./登录页.jpg" />
+        <img src="./登录页.jpg" />
+        <img src="./登录页.jpg" />
+        <img src="./登录页.jpg" />
+        <img src="./登录页.jpg" />
+    </div>
+    <div class="code-box">
+        <img class="code" src="./小程序葵花码.jpg" />
+    </div>
+</body>
+
+</html>

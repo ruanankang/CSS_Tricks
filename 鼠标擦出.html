@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>鼠标擦出</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    #scratch {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="scratch"></div>
+
+  <script src="wScratchPad.min.js"></script>
+  <script>
+    $("#scratch").wScratchPad({
+      size: 100, // The size of the brush/scratch.
+      bg: "img/03.jpg", // Background (image path or hex color).
+      fg: "#000", // Foreground (image path or hex color).
+      realtime: true, // Calculates percentage in realitime.
+      scratchDown: null, // Set scratchDown callback.
+      scratchUp: null, // Set scratchUp callback.
+      scratchMove: null, // Set scratcMove callback.
+      cursor: "crosshair" // Set cursor.
+    });
+  </script>
+</body>
+
+</html>

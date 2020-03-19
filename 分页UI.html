@@ -1,0 +1,118 @@
+<!--
+ * @Descripttion: 
+ * @Author: Ankong
+ * @Date: 2019-09-21 15:32:45
+ * @LastEditors: Ankong
+ * @LastEditTime: 2019-09-21 19:11:59
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>分页UI</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1ce37c;
+        }
+        
+        ul {
+            position: relative;
+            background-color: #fff;
+            display: flex;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        li {
+            list-style: none;
+            line-height: 50px;
+            margin: 0 5px;
+        }
+        
+        li.pageNumber {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        
+        li a {
+            display: block;
+            text-decoration: none;
+            color: #777;
+            font-weight: 600;
+            border-radius: 50%;
+        }
+        
+        li.pageNumber:hover a,
+        li.pageNumber.active a {
+            background: #333;
+            color: #fff;
+        }
+        
+        li:first-child {
+            margin-right: 30px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        li:last-child {
+            margin-left: 30px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="pagination">
+        <li><a href="#" class="prev">&lt; Prev</a></li>
+        <li class="pageNumber active"><a href="#">1</a></li>
+        <li class="pageNumber"><a href="#">2</a></li>
+        <li class="pageNumber"><a href="#">3</a></li>
+        <li class="pageNumber"><a href="#">4</a></li>
+        <li class="pageNumber"><a href="#">5</a></li>
+        <li class="pageNumber"><a href="#">6</a></li>
+        <li><a href="#" class="next">Next &gt;</a></li>
+    </ul>
+    <script>
+        $(document).ready(function() {
+            $(".next").click(() => {
+                $(".pagination")
+                    .find(".pageNumber.active")
+                    .next()
+                    .addClass("active");
+                $(".pagination")
+                    .find(".pageNumber.active")
+                    .prev()
+                    .removeClass("active");
+            });
+            $(".prev").click(() => {
+                $(".pagination")
+                    .find(".pageNumber.active")
+                    .prev()
+                    .addClass("active");
+                $(".pagination")
+                    .find(".pageNumber.active")
+                    .next()
+                    .removeClass("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
