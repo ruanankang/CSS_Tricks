@@ -8,11 +8,17 @@
   <link rel="shortcut icon" href="./img/logo.png" />
   <title>记录点滴美好生活</title>
   <style>
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    
     body {
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100vh;
+      width: 100vw;
+      min-height: 100vh;
+      min-width: 40vw;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -24,20 +30,20 @@
     }
     
     header {
-      height: 80px;
-      width: 100%;
+      flex-basis: 10vh;
+      width: 100vw;
       background-color: #fff;
       opacity: 0.8;
     }
     
     header .logo {
-      height: 100%;
+      height: 10vh;
+      box-sizing: border-box;
+      padding: 1vh 3vw;
     }
     
     header .logo img {
       height: 90%;
-      margin-top: 5px;
-      margin-left: 40px;
       filter: saturate(1.5);
     }
     
@@ -47,7 +53,7 @@
     
     .main {
       flex: 1;
-      width: 100%;
+      width: 100vw;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -55,39 +61,38 @@
     
     .main .box {
       background-color: rgb(255, 255, 255);
-      height: 500px;
-      width: 400px;
-      padding: 40px 50px;
-      border-radius: 30px;
+      width: 25vw;
+      height: 70vh;
+      min-width: 300px;
+      min-height: 400px;
+      padding: 5vh 2vw;
+      border-radius: 4vmin;
       box-shadow: 0px 10px 20px 0px #00000041;
       box-sizing: border-box;
     }
     
     .main .box img {
-      height: 50%;
+      height: 35vh;
+      width: auto;
+      min-height: 150px;
       display: block;
       margin: 0 auto;
-      margin-top: 20px;
+      margin-top: 4vmin;
     }
     
     .main .box p {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 5vmin;
     }
     
     footer {
-      height: 80px;
-      width: 100%;
+      height: 11vh;
+      width: 100vw;
       background-color: rgba(253, 215, 44, 0.897);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
-    
-    a {
-      text-decoration: none;
-      color: #333;
     }
   </style>
 </head>
