@@ -1,125 +1,117 @@
-<!--
- * @Descripttion: 
- * @version: 
- * @Author: Ankong
- * @Date: 2019-08-26 17:03:43
- * @LastEditors: Ankong
- * @LastEditTime: 2019-09-08 12:52:58
- -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-    <title>搜索框图标动效</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            background-color: #2ecc71;
-        }
-        
-        .search-box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .input {
-            width: 60px;
-            height: 60px;
-            background: none;
-            outline: none;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            box-sizing: border-box;
-            transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
-            transition-delay: 0.4s;
-        }
-        
-        .inclicked {
-            width: 360px;
-            border-radius: 0;
-            padding: 0 15px;
-            color: #fff;
-            font-size: 20px;
-            padding-right: 45px;
-        }
-        
-        .btn {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            background: none;
-            outline: none;
-            border: none;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
-        
-        .btn::before {
-            content: "";
-            width: 4px;
-            height: 25px;
-            background-color: #fff;
-            transform: rotate(-45deg);
-            position: absolute;
-            bottom: -16px;
-            right: -6px;
-            transition: 0.3s;
-        }
-        
-        .close::before,
-        .close::after {
-            content: "";
-            width: 4px;
-            height: 34px;
-            background-color: #fff;
-            position: absolute;
-            bottom: 12px;
-            right: 28px;
-        }
-        
-        .close::before {
-            transform: rotate(-45deg);
-        }
-        
-        .close::after {
-            transform: rotate(45deg);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <title>搜索框图标动效</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background-color: #2ecc71;
+    }
+    
+    .search-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .input {
+      width: 60px;
+      height: 60px;
+      background: none;
+      outline: none;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-sizing: border-box;
+      transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
+      transition-delay: 0.4s;
+    }
+    
+    .inclicked {
+      width: 360px;
+      border-radius: 0;
+      padding: 0 15px;
+      color: #fff;
+      font-size: 20px;
+      padding-right: 45px;
+    }
+    
+    .btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      background: none;
+      outline: none;
+      border: none;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+    
+    .btn::before {
+      content: "";
+      width: 4px;
+      height: 25px;
+      background-color: #fff;
+      transform: rotate(-45deg);
+      position: absolute;
+      bottom: -16px;
+      right: -6px;
+      transition: 0.3s;
+    }
+    
+    .close::before,
+    .close::after {
+      content: "";
+      width: 4px;
+      height: 34px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 12px;
+      right: 28px;
+    }
+    
+    .close::before {
+      transform: rotate(-45deg);
+    }
+    
+    .close::after {
+      transform: rotate(45deg);
+    }
+  </style>
 </head>
 
 <body>
-    <div class="search-box">
-        <input type="text" class="input" />
-        <button class="btn"></button>
-    </div>
+  <div class="search-box">
+    <input type="text" class="input" />
+    <button class="btn"></button>
+  </div>
 
-    <script>
-        $(
-            $(".btn").click(function() {
-                $(".input").toggleClass("inclicked");
-                $(this).toggleClass("close");
-                if (
-                    $(this)
-                    .attr("class")
-                    .indexOf("close") == -1
-                ) {
-                    $(".input").val("");
-                }
-            })
-        );
-    </script>
+  <script>
+    $(
+      $(".btn").click(function() {
+        $(".input").toggleClass("inclicked");
+        $(this).toggleClass("close");
+        if (
+          $(this)
+          .attr("class")
+          .indexOf("close") == -1
+        ) {
+          $(".input").val("");
+        }
+      })
+    );
+  </script>
 </body>
 
 </html>

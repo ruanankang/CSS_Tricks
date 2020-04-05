@@ -1,114 +1,108 @@
-<!--
- * @Descripttion: 
- * @Author: Ankong
- * @Date: 2019-09-05 13:04:58
- * @LastEditTime: 2019-10-09 09:28:01
- -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>登录界面动效</title>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-            font-family: sans-serif;
-            background: url(bg.jpg) no-repeat;
-            background-size: cover;
-        }
-        
-        .box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            padding: 40px;
-            background-color: rgba(0, 0, 0, 0.8);
-            box-sizing: border-box;
-            border-radius: 10px;
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-        }
-        
-        .box h2 {
-            width: 100%;
-            padding: 0;
-            margin: 0 0 30px;
-            text-align: center;
-            color: #fff;
-        }
-        
-        .box .inputBox {
-            position: relative;
-        }
-        
-        .box .inputBox input {
-            width: 100%;
-            padding: 8px 0;
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #fff;
-            margin-bottom: 30px;
-            border: none;
-            outline: none;
-            border-bottom: 2px solid #fff;
-            background: transparent;
-        }
-        
-        .box .inputBox label {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 8px 0;
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #fff;
-            pointer-events: none;
-            transition: 0.5s;
-        }
-        /* 主要动效 */
-        
-        .inputBox input:focus~label,
-        .inputBox input:valid~label {
-            top: -24px;
-            left: 0;
-            font-size: 12px;
-            color: #3adacb;
-        }
-        
-        .box input[type="submit"] {
-            background-color: #0b554d;
-            border: none;
-            outline: none;
-            color: #fff;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>登录界面动效</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+      background: url('./img/bg.jpg') no-repeat;
+      background-size: cover;
+    }
+    
+    .box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-sizing: border-box;
+      border-radius: 10px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    }
+    
+    .box h2 {
+      width: 100%;
+      padding: 0;
+      margin: 0 0 30px;
+      text-align: center;
+      color: #fff;
+    }
+    
+    .box .inputBox {
+      position: relative;
+    }
+    
+    .box .inputBox input {
+      width: 100%;
+      padding: 8px 0;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #fff;
+      background: transparent;
+    }
+    
+    .box .inputBox label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 8px 0;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+    /* 主要动效 */
+    
+    .inputBox input:focus~label,
+    .inputBox input:valid~label {
+      top: -24px;
+      left: 0;
+      font-size: 12px;
+      color: #3adacb;
+    }
+    
+    .box input[type="submit"] {
+      background-color: #0b554d;
+      border: none;
+      outline: none;
+      color: #fff;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="box">
-        <h2>Login</h2>
-        <form>
-            <div class="inputBox">
-                <input id="username" type="text" required />
-                <label for="username">Username</label>
-            </div>
-            <div class="inputBox">
-                <input id="password" type="password" required />
-                <label for="password">Password</label>
-            </div>
-            <input type="submit" value="Submit" />
-        </form>
-    </div>
+  <div class="box">
+    <h2>Login</h2>
+    <form>
+      <div class="inputBox">
+        <input id="username" type="text" required />
+        <label for="username">Username</label>
+      </div>
+      <div class="inputBox">
+        <input id="password" type="password" required />
+        <label for="password">Password</label>
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
 </body>
 
 </html>

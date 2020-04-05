@@ -1,72 +1,65 @@
-<!--
- * @Descripttion: 
- * @Author: Ankong
- * @Date: 2019-09-21 19:52:20
- * @LastEditors: Ankong
- * @LastEditTime: 2019-09-21 20:01:59
- -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>色块浮动</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #2196f3;
-        }
-        
-        .loader {
-            position: relative;
-            display: flex;
-        }
-        
-        .loader span {
-            width: 50px;
-            height: 300px;
-            margin: 0 20px;
-            background: #2196f3;
-            animation: animate 1.4s linear infinite;
-        }
-        
-        @keyframes animate {
-            0% {
-                box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            50% {
-                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-                opacity: 1;
-            }
-            0% {
-                box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>色块浮动</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2196f3;
+    }
+    
+    .loader {
+      position: relative;
+      display: flex;
+    }
+    
+    .loader span {
+      width: 50px;
+      height: 300px;
+      margin: 0 20px;
+      background: #2196f3;
+      animation: animate 1.4s linear infinite;
+    }
+    
+    @keyframes animate {
+      0% {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      50% {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        opacity: 1;
+      }
+      0% {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </body>
 
 </html>

@@ -19,17 +19,18 @@
       overflow: hidden;
     }
   </style>
-  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="./plugins/jquery.min.js"></script>
 </head>
 
 <body>
   <div id="scratch"></div>
 
-  <script src="wScratchPad.min.js"></script>
+  <script src="./plugins/wScratchPad.min.js"></script>
   <script>
     $("#scratch").wScratchPad({
       size: 100, // The size of the brush/scratch.
-      bg: "img/03.jpg", // Background (image path or hex color).
+      bg: "img/03.jpg", // Background (image path or hex color). // 此处图片有跨域，由于canvas画图片时src存在跨域可能
       fg: "#000", // Foreground (image path or hex color).
       realtime: true, // Calculates percentage in realitime.
       scratchDown: null, // Set scratchDown callback.

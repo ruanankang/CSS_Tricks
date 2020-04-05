@@ -1,163 +1,157 @@
-<!--
- * @Author: Ankong
- * @Date: 2019-10-21 12:56:40
- * @LastEditors: Ankong
- * @LastEditTime: 2019-10-21 16:40:21
- -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>3D图片翻转效果</title>
-    <link rel="stylesheet" href="./swiper/package/css/swiper.min.css" />
-    <style>
-        body {
-            background: #fff;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .swiper-container {
-            width: 100%;
-            padding-top: 150px;
-            padding-bottom: 50px;
-        }
-        
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
-            height: 380px;
-        }
-        
-        .swiper-slide .imgBx {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-        }
-        
-        .swiper-slide .imgBx img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-        
-        .swiper-slide .details {
-            box-sizing: border-box;
-            font-size: 20px;
-            padding: 20px;
-            background-color: #f5f5f5ba;
-        }
-        
-        .swiper-slide .details h3 {
-            margin: 0;
-            padding: 0;
-            font-size: 20px;
-            text-align: center;
-            line-height: 20px;
-        }
-        
-        .swiper-slide .details h3 span {
-            font-size: 14px;
-            color: #cacaca;
-        }
-        
-         :root {
-            --swiper-theme-color: #ffb9b2;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>3D图片翻转效果</title>
+  <link rel="stylesheet" href="./plugins/swiper/package/css/swiper.min.css" />
+  <style>
+    body {
+      background: #fff;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .swiper-container {
+      width: 100%;
+      padding-top: 150px;
+      padding-bottom: 50px;
+    }
+    
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 380px;
+    }
+    
+    .swiper-slide .imgBx {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+    
+    .swiper-slide .imgBx img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .swiper-slide .details {
+      box-sizing: border-box;
+      font-size: 20px;
+      padding: 20px;
+      background-color: #f5f5f5ba;
+    }
+    
+    .swiper-slide .details h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      text-align: center;
+      line-height: 20px;
+    }
+    
+    .swiper-slide .details h3 span {
+      font-size: 14px;
+      color: #cacaca;
+    }
+    
+     :root {
+      --swiper-theme-color: #ffb9b2;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="imgBx"><img src="./img/01.jpg" /></div>
-                <div class="details">
-                    <h3>Alice Dan<br /><span>Web Designer</span></h3>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="imgBx"><img src="./img/02.jpg" /></div>
-                <div class="details">
-                    <h3>Alice Dan<br /><span>Web Designer</span></h3>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="imgBx"><img src="./img/03.jpg" /></div>
-                <div class="details">
-                    <h3>Alice Dan<br /><span>Web Designer</span></h3>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="imgBx"><img src="./img/04.jpg" /></div>
-                <div class="details">
-                    <h3>Alice Dan<br /><span>Web Designer</span></h3>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="imgBx"><img src="./img/05.jpg" /></div>
-                <div class="details">
-                    <h3>Alice Dan<br /><span>Web Designer</span></h3>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="imgBx"><img src="./img/01.jpg" /></div>
-                <div class="details">
-                    <h3>Alice Dan<br /><span>Web Designer</span></h3>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="imgBx"><img src="./img/02.jpg" /></div>
-                <div class="details">
-                    <h3>Alice Dan<br /><span>Web Designer</span></h3>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="imgBx"><img src="./img/03.jpg" /></div>
-                <div class="details">
-                    <h3>Alice Dan<br /><span>Web Designer</span></h3>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="imgBx"><img src="./img/04.jpg" /></div>
-                <div class="details">
-                    <h3>Alice Dan<br /><span>Web Designer</span></h3>
-                </div>
-            </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="imgBx"><img src="./img/01.jpg" /></div>
+        <div class="details">
+          <h3>Alice Dan<br /><span>Web Designer</span></h3>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgBx"><img src="./img/02.jpg" /></div>
+        <div class="details">
+          <h3>Alice Dan<br /><span>Web Designer</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgBx"><img src="./img/03.jpg" /></div>
+        <div class="details">
+          <h3>Alice Dan<br /><span>Web Designer</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgBx"><img src="./img/04.jpg" /></div>
+        <div class="details">
+          <h3>Alice Dan<br /><span>Web Designer</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgBx"><img src="./img/05.jpg" /></div>
+        <div class="details">
+          <h3>Alice Dan<br /><span>Web Designer</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgBx"><img src="./img/01.jpg" /></div>
+        <div class="details">
+          <h3>Alice Dan<br /><span>Web Designer</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgBx"><img src="./img/02.jpg" /></div>
+        <div class="details">
+          <h3>Alice Dan<br /><span>Web Designer</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgBx"><img src="./img/03.jpg" /></div>
+        <div class="details">
+          <h3>Alice Dan<br /><span>Web Designer</span></h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="imgBx"><img src="./img/04.jpg" /></div>
+        <div class="details">
+          <h3>Alice Dan<br /><span>Web Designer</span></h3>
+        </div>
+      </div>
     </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
 
-    <script src="swiper/package/js/swiper.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".swiper-container", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 500, //图片深度
-                // depth: 100, //图片深度
-                modifier: 1, //轮播模式
-                // modifier: 5, //轮播模式
-                slideShadows: true
-            },
-            pagination: {
-                el: ".swiper-pagination"
-            }
-        });
-    </script>
+  <script src="./plugins/swiper/package/js/swiper.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 500, //图片深度
+        // depth: 100, //图片深度
+        modifier: 1, //轮播模式
+        // modifier: 5, //轮播模式
+        slideShadows: true
+      },
+      pagination: {
+        el: ".swiper-pagination"
+      }
+    });
+  </script>
 </body>
 
 </html>
