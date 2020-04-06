@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>橡皮筋弹跳</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
+    .btn {
+      width: 200px;
+      height: 60px;
+      margin: 40px 0;
+      background-color: coral;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      outline: none;
+      text-transform: uppercase;
+    }
+    
+    .box {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: cadetblue;
+      margin: 0 auto;
+    }
+    
+    .box:hover {
+      animation: rubberBand 1s;
+    }
+    
+    .btn:hover {
+      animation: rubberBand 1s;
+    }
+    
+    .text:hover {
+      animation: rubberBand 1s;
+    }
+    
+    @keyframes rubberBand {
+      0% {
+        transform: scale3d(1, 1, 1);
+      }
+      35% {
+        transform: scale3d(1.25, 0.75, 1);
+      }
+      45% {
+        transform: scale3d(0.75, 1, 1);
+      }
+      60% {
+        transform: scale3d(1.2, 0.8, 1);
+      }
+      100% {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text">Rubber Band Animation</h1>
+    <button class="btn">hover me</button>
+    <div class="box"></div>
+  </div>
+</body>
+
+</html>

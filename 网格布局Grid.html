@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网格布局Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .wrapper {
+      display: grid;
+      grid-template-columns: 7fr 3fr;
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+    }
+    
+    .wrapper>div {
+      background-color: #eee;
+      padding: 1rem;
+    }
+    
+    .wrapper>div:nth-child(odd) {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div>University of electronic science and technology is located in chengdu in sichuan province, formerly known as chengdu telecom engineering college, was in 1956, premier zhou enlai personally deployed, by the jiaotong university (now the Shanghai jiaotong
+      university, xi 'an jiaotong university), nanjing institute of technology (now southeast university), south China institute of technology (now south China university of technology) of telecommunications engineering related mergers create.</div>
+    <div>University of electronic science and technology is located in chengdu in sichuan province, formerly known as chengdu telecom engineering college, was in 1956, premier zhou enlai personally deployed, by the jiaotong university (now the Shanghai jiaotong
+      university, xi 'an jiaotong university), nanjing institute of technology (now southeast university), south China institute of technology (now south China university of technology) of telecommunications engineering related mergers create.</div>
+    <div>University of electronic science and technology is located in chengdu in sichuan province, formerly known as chengdu telecom engineering college, was in 1956, premier zhou enlai personally deployed, by the jiaotong university (now the Shanghai jiaotong
+      university, xi 'an jiaotong university), nanjing institute of technology (now southeast university), south China institute of technology (now south China university of technology) of telecommunications engineering related mergers create.</div>
+    <div>University of electronic science and technology is located in chengdu in sichuan province, formerly known as chengdu telecom engineering college, was in 1956, premier zhou enlai personally deployed, by the jiaotong university (now the Shanghai jiaotong
+      university, xi 'an jiaotong university), nanjing institute of technology (now southeast university), south China institute of technology (now south China university of technology) of telecommunications engineering related mergers create.</div>
+  </div>
+</body>
+
+</html>
