@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时钟</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #ecf1f9;
+    }
+    
+    .clock {
+      width: 30vmax;
+      height: 30vmax;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('./img/clock.png') no-repeat;
+      background-size: 88%;
+      background-position: center center;
+      border: 4px solid #e5ecf6;
+      border-radius: 50%;
+      box-shadow: -10px -10px 20px rgba(255, 255, 255), inset -8px -8px 10px 1px rgba(255, 255, 255), 10px 10px 20px rgba(193, 198, 199, 0.49), inset 10px 10px 10px 0px rgba(193, 198, 199, 0.65)
+    }
+    
+    .clock::before {
+      content: '';
+      position: absolute;
+      width: 1.1vmax;
+      height: 1.1vmax;
+      background-color: #c32f1f;
+      border-radius: 50%;
+      z-index: 1000;
+    }
+    
+    .clock .hour,
+    .clock .min,
+    .clock .sec {
+      position: absolute;
+    }
+    
+    .hour,
+    .hr {
+      width: 14vmax;
+      height: 14vmax;
+    }
+    
+    .min,
+    .mn {
+      width: 17vmax;
+      height: 17vmax;
+    }
+    
+    .sec,
+    .sc {
+      width: 20vmax;
+      height: 20vmax;
+    }
+    
+    .hr,
+    .mn,
+    .sc {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      border-radius: 50%;
+    }
+    
+    .hr::before {
+      content: '';
+      position: absolute;
+      width: 0.6vmax;
+      height: 7vmax;
+      background-color: #434c5c;
+      z-index: 10;
+      border-radius: 0.6vmax 0.6vmax 0 0;
+    }
+    
+    .mn::before {
+      content: '';
+      position: absolute;
+      width: 0.3vmax;
+      height: 8vmax;
+      background-color: #c32f1f;
+      z-index: 11;
+      border-radius: 0.15vmax 0.15vmax 0 0;
+    }
+    
+    .sc::before {
+      content: '';
+      position: absolute;
+      width: 0.15vmax;
+      height: 13vmax;
+      background-color: #c32f1f;
+      z-index: 12;
+      border-radius: 0.15vmax 0.15vmax 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock">
+    <div class="hour">
+      <div class="hr" id="hr"></div>
+    </div>
+    <div class="min">
+      <div class="mn" id="mn"></div>
+    </div>
+    <div class="sec">
+      <div class="sc" id="sc"></div>
+    </div>
+  </div>
+
+  <script>
+    const hr = document.querySelector('#hr');
+    const mn = document.querySelector('#mn');
+    const sc = document.querySelector('#sc');
+
+
+    setInterval(() => {
+      let date = new Date();
+      let hour = date.getHours();
+      let minute = date.getMinutes();
+      let second = date.getSeconds();
+      hr.style.transform = `rotate(${hour*30 + minute/2 + second/120}deg)`;
+      mn.style.transform = `rotate(${minute*6 + second/10}deg)`;
+      sc.style.transform = `rotate(${second*6}deg)`;
+    })
+  </script>
+</body>
+
+</html>
