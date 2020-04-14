@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分步组件</title>
+  <style>
+     :root {
+      --steps-item-width: 40px;
+      --steps-item-height: var(--steps-item-width);
+      --steps-item-uncheched-color: #c4c6cf;
+      --steps-item-cheching-color: #5584ff;
+      --steps-item-cheched-color: #fff;
+      --color-dark: #333;
+    }
+    
+    i[class^='steps-'] {
+      font-style: normal;
+      display: inline-block;
+      width: var(--steps-item-width);
+      height: var(--steps-item-height);
+      border-radius: 50%;
+      border: 1px solid var(--steps-item-uncheched-color);
+      cursor: pointer;
+      text-align: center;
+      line-height: var(--steps-item-height);
+      color: var(--steps-item-uncheched-color);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+      color: var(--color-dark);
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      min-height: 100vh;
+      font-family: 'Brandon Grotesque Medium', Arial;
+    }
+    
+    .steps-container {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    label {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.5s;
+    }
+    
+    input[type^='radio'] {
+      display: none;
+    }
+    
+    span.text {
+      margin-left: 8px;
+      color: var(--steps-item-uncheched-color);
+      transition: margin 0.5s, color 0.3s;
+    }
+    
+    input[type='radio']:checked+i[class^='steps-item'] {
+      color: #fff;
+      background-color: var(--steps-item-cheching-color);
+      border-color: var(--steps-item-cheching-color);
+    }
+    
+    input[type='radio']:checked~span {
+      color: var(--color-dark);
+    }
+    
+    #steps-item01-container:checked {}
+    
+    input[type='radio']:checked+i::after {
+      border-color: var(--steps-item-cheching-color);
+    }
+    
+    i[class^='steps-item02']::after,
+    i[class^='steps-item03']::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 8vw;
+      top: calc(var(--steps-item-height) / 2);
+      z-index: -1;
+      width: 22vw;
+      border-bottom: 1px solid var(--steps-item-uncheched-color);
+    }
+    
+    input[type=radio]:focus>.test {
+      display: none;
+    }
+    
+    @media(max-width: 1200px) {
+      label {
+        flex-direction: column;
+      }
+      span.text {
+        margin-left: 0;
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="steps-container">
+    <label class="test" for="steps-item01-container">
+      <input type="radio" name="steps" id="steps-item01-container">
+      <i class="steps-item01-circle">01</i>
+      <span class="text">Step01</span>
+    </label>
+    <label for="steps-item02-container">
+      <input type="radio" name="steps" id="steps-item02-container">
+      <i class="steps-item02-circle">02</i>
+      <span class="text">Step02</span>
+    </label>
+    <label for="steps-item03-container">
+      <input type="radio" name="steps" id="steps-item03-container">
+      <i class="steps-item03-circle">03</i>
+      <span class="text">Step03</span>
+    </label>
+  </div>
+</body>
+
+</html>
