@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>图片瀑布流 flex</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				margin: 4px;
+				font-family: Helvetica;
+			}
+
+			.masonry {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				height: 2160px;
+				counter-reset: item-counter;
+			}
+
+			.masonry .item {
+				width: 25%;
+				padding: 2px;
+				position: relative;
+				box-sizing: border-box;
+			}
+
+			.masonry .item img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+
+			.item::after {
+				counter-increment: item-counter;
+				content: counter(item-counter);
+				position: absolute;
+				top: 2px;
+				left: 2px;
+				width: 24px;
+				height: 24px;
+				text-align: center;
+				line-height: 24px;
+				background-color: #000;
+				color: #fff;
+			}
+
+			.item:nth-child(4n + 1) {
+				order: 1;
+			}
+			.item:nth-child(4n + 2) {
+				order: 2;
+			}
+			.item:nth-child(4n + 3) {
+				order: 3;
+			}
+			.item:nth-child(4n + 4) {
+				order: 4;
+			}
+
+			@media (max-width: 1340px) {
+				.masonry {
+					height: 2060px;
+				}
+			}
+			@media (max-width: 1275px) {
+				.masonry {
+					height: 1960px;
+				}
+			}
+			@media (max-width: 1220px) {
+				.masonry {
+					height: 1860px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="masonry">
+			<div class="item">
+				<img src="https://picsum.photos/360/420?random=1" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/520?random=2" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/480?random=3" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/580?random=4" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/520?random=5" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/420?random=6" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/460?random=7" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/500?random=8" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/440?random=9" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/520?random=10" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/560?random=11" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/430?random=12" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/510?random=13" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/440?random=14" />
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/360/540?random=15" />
+			</div>
+		</div>
+	</body>
+</html>
